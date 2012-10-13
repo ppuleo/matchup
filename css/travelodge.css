@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------
+ * Title: travelodge.css
+ * Date: 10/9/2012
+ * Version: 0.1
+ * Author: Phil Puleo
+ * Company: Phil Puleo Consulting LLC
+ * Description: Styles for the travelodge match-up game
+ *
+ * Copyright 2012, Phil Puleo Consutling LLC.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ------------------------------------------------------------------*/
+  
+body {
+  background-color: #F8F8F8;
+  }
+  
+.navbar .brand {
+  font-weight: normal;
+  }
+  
+.navbar ul li {
+  font-weight: bold;
+  }
+
+.alert {
+  display: none;
+  }
+  
+.bicon {
+  display: block;
+  float: left;
+  height: 48px;
+  margin: 0 8px 5px 0;
+  }
+  
+/*-- Cards --*/
+.main-content {
+  width: 960px;
+  }
+  
+.card-row {
+  margin: 20px 0;
+  }
+  
+.panel:first-child {
+  margin-left: 0;
+  }
+  
+.panel {
+  float: left;
+  height: auto;
+  margin-left: 6px;
+  position: relative;
+  width: 154px;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  }
+  
+.panel .face {
+  background-color: #10456F;
+  border: 5px solid #FFFFFF;
+  border-radius: 5px;
+  box-shadow:  0px 1px 4px 1px rgba(50, 50, 50, 0.3);
+  float: none;
+  max-width: 144px;
+  transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow:  0px 1px 4px 1px rgba(50, 50, 50, 0.3);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  }
+  
+.panel .front {
+  position: relative;
+  z-index: 900;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+.panel .back {
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 800; 
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  }
+  
+.flip .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  }
+  
+.flip .back {
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);  }
+  
+img.cardback {
+  opacity: 1;
+  }
+  
+img.cardback:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  }
