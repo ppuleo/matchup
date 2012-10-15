@@ -152,35 +152,43 @@ window.travelodge = (function() {
     // Shuffle the board array.
     boardArray.shuffle();
     
+    // Build the HTML for each card and card row.
     var cardHTML = "";
     
+    // We have 18 cards so 6 cards in 3 rows...
     for(var i=0; i < 3; i++) {
       
+      // Build the card row
       cardHTML += '<div class="row card-row">';
       
+      // For each row, build the cards...
       for(var j=0; j < 6; j++) {
         cardHTML += '<div class="span2 panel">';
         cardHTML += '<div class="face front">';
-        cardHTML += '<img class="cardback" src="/img/card.png" alt="Card Back" /></div>';
+        cardHTML += '<img class="cardback" src="/img/cardback2.jpg" alt="Card Back" /></div>';
         cardHTML += '<div class="face back">';
         cardHTML += '<img class="cardfront" src="/img/'+boardArray[j+i*6].file+'" alt="Card Front" /></div>';
         cardHTML += '</div>';
       }
       
+      // Finish the row.
       cardHTML += '</div>';
       
     }
     
+    // Add the rows of cards to the gameboard.
     $("#gameboard").append(cardHTML);
     
   }
   
   // Function to celebrate when you win.
   function youWin() {
+    
+    // Why? Quick way of saying "if the user has played more than 5 games".
     if(travelodge.score/9-1 > 4) { 
-      $(".play-again").remove();
+      $(".play-again").remove(); // You're cut off. Go do something productive. Or refresh the page.
     }
-    $(".witty-message").text(travelodge.messageArray[travelodge.score/9-1]);
+    $(".witty-message").text(travelodge.messageArray[travelodge.score/9-1]); // Show the appropriate win message.
     $(".alert").delay(800).fadeIn("fast");
   }
   

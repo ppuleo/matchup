@@ -37,11 +37,18 @@ body {
   display: none;
   }
   
-.bicon {
+.wrap {
   display: block;
   float: left;
-  height: 48px;
   margin: 0 8px 5px 0;
+  }
+  
+.technology {
+  margin-top: 30px;
+  }
+  
+sub.registered {
+  font-size:.25em;
   }
   
 /*-- Cards --*/
@@ -92,6 +99,7 @@ body {
   z-index: 900;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
   -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg);
   }
   
 .panel .back {
@@ -102,16 +110,21 @@ body {
   z-index: 800; 
   -webkit-transform: rotateY(-180deg);
   -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
   }
   
 .flip .front {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
   }
   
 .flip .back {
+  z-index: 1000;
   -webkit-transform: rotateX(0deg) rotateY(0deg);
-  -moz-transform: rotateX(0deg) rotateY(0deg);  }
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -ms-transform: rotateX(0deg) rotateY(0deg); 
+  }
   
 img.cardback {
   opacity: 1;
