@@ -189,7 +189,7 @@ window.travelodge = (function() {
       $(".play-again").remove(); // You're cut off. Go do something productive. Or refresh the page.
     }
     $(".witty-message").text(travelodge.messageArray[travelodge.score/9-1]); // Show the appropriate win message.
-    $(".alert").delay(800).fadeIn("fast");
+    $(".alert").fadeIn("fast");
   }
 
   // Build the board.
